@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../../partials/header.ejs') %>
+<body  style="background-color: #eee;">
+  <div class="container-xl px-4">
+    <hr class="mt-0 mb-4">
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <%- include('../../profile/biodata/biodata.ejs') %>
+        </div>
+        <div class="col-xl-8">
+            <!-- Account details card-->
+            <%- include('../../profile/histories/histories.ejs') %>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "bLengthChange" : false,
+            "bInfo":false,
+            "searching": false,
+            "pageLength": 5
+        });
+    });
+</script>
+</body>
+</html>

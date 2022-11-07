@@ -1,0 +1,33 @@
+<div class="card mb-4">
+  <div class="card-header">Account Details</div>
+  <div class="card-body">
+      <form method="post" action="/profile" autocomplete="off">
+          <!-- Form Group (username)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="inputUsername">Full Name</label>
+              <input class="form-control" name="fullName" type="text" placeholder="Enter your username" value="<%= name %>">
+          </div>
+          <!-- Form Group (email address)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress">Email address</label>
+              <input class="form-control" name="email" type="email" placeholder="Enter your email address" value="<%= email %>">
+          </div>
+          <!-- Form Group (address)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress">Address</label>
+              <input class="form-control" name="address" type="text" placeholder="Enter your email address" value="<%= address %>">
+          </div>
+          <!-- Form Row-->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (birthday)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="inputBirthday">Birthday</label>
+                  <input class="form-control" type="date" name="birthDate" placeholder="Enter your birthday" value="<%= date %>">
+              </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+          <a class="btn btn-secondary" href="/dashboard" type="button">Back to home</a>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg py-4 py-xs-4">
+    <div class="container text-uppercase">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon btn-close-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav me-auto">
+          <a class="nav-link active" aria-current="page" href="#mainpage">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Work</a>
+          <a class="nav-link active" aria-current="page" href="#">Contact</a>
+          <a class="nav-link active" aria-current="page" href="#">About Me</a>
+        </div>
+        <div class="navbar-nav dropdown">
+          <a style="text-decoration: none;" class="nav-link active" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= name %>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a style="color: black !important;" class="dropdown-item" href="/profile">Profile</a></li>
+            <li><a style="color: black !important;" class="dropdown-item" aria-current="page" href="/logout">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>

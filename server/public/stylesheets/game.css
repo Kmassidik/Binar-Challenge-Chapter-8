@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+body{
+    background-color: #9C835F !important;
+}
+h1{
+    font-family: "Open Sans";
+    font-weight: bold !important;
+}
+.title{
+    color: #F9B23D;
+}
+.container{
+    padding-left:  9rem;
+    padding-right:  9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+}
+.option img {
+    width: 7rem;
+    height: 7rem;
+    padding : 10px 10px;
+    border-radius: 20px;
+}
+.activePick {
+    background: rgba(255,255,255,0.7);
+}
+.vs{
+    font-family: "Open Sans";
+    font-weight: bold !important;
+    font-size: 144px;
+    color: red;
+    visibility: visible;
+}
+.result{
+    font-family: "Open Sans";
+    font-weight: bold !important;
+    position: absolute;
+    border-radius: 10px;
+    visibility: hidden;
+    width: 271px;
+    height: 150px;
+    font-size: 38px;
+    color: white;
+    transform: rotate(-15deg);
+    animation: .8s box-animation linear infinite;
+}
+.win{
+background-color: #4C9654;
+}
+.draw {
+background-color: #035B0C;
+}
+
+@keyframes box-animation {
+    0% {
+      transform: rotate(-28deg);
+    }
+    5% {
+      transform: rotate(-20deg);
+    }
+    10% {
+      transform: rotate(-12deg);
+    }
+    15% {
+      transform: rotate(-4deg);
+    }
+    20% {
+      transform: rotate(4deg);
+    }
+    25% {
+      transform: rotate(12deg);
+    }
+    30% {
+      transform: rotate(20deg);
+    }
+    35% {
+      transform: rotate(28deg);
+    }
+    40% {
+      transform: rotate(36deg);
+    }
+    45% {
+      transform: rotate(44deg);
+    }
+    50% {
+      transform: rotate(52deg);
+    }
+    55% {
+      transform: rotate(44deg);
+    }
+    60% {
+      transform: rotate(36deg);
+    }
+    65% {
+      transform: rotate(28deg);
+    }
+    70% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(12deg);
+    }
+    80% {
+      transform: rotate(4deg);
+    }
+    85% {
+      transform: rotate(-4deg);
+    }
+    90% {
+      transform: rotate(-12deg);
+    }
+    95% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(-28deg);
+    }
+  }

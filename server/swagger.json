@@ -1,0 +1,393 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "RESTful API - Game Suit 1.0",
+    "description": "This is Documentation RESTful API from binar-challenge-chapter-8, this documentation very useful to more understand about Game Suit program, hope you can understand, thanks.",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "k.massidik@gmail.com"
+    },
+    "license": {
+      "name": "Binar batch 25",
+      "url": "https://www.binaracademy.com/"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Login",
+      "description": "Everything about Authentication"
+    },
+    {
+      "name": "Game Suit",
+      "description": "Everything about our Game"
+    }
+  ],
+  "paths": {
+    "/signup": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Create user",
+        "description": "You mush signup to get login",
+        "operationId": "register",
+        "requestBody": {
+          "description": "Created user object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Lgin user",
+        "description": "This can only be done by someone has been regis",
+        "operationId": "login",
+        "requestBody": {
+          "description": "Created user object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/authorization": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "check login is authorized",
+        "description": "Please fill the Authorize with the token you get on LOGIN",
+        "operationId": "authorize",
+        "requestBody": {
+          "description": "Check user login has token"
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth":[]
+          }
+        ]
+      }
+    },
+    "/create-room": {
+      "post": {
+        "tags": [
+          "Game Suit"
+        ],
+        "summary": "Create room",
+        "description": "This can only be done by someone has been regis",
+        "operationId": "create-room",
+        "requestBody": {
+          "description": "Created user object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Createroom"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Createroom"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Createroom"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Createroom"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Createroom"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth":[]
+          }
+        ]
+      }
+    },
+    "/fight/room-id": {
+      "post": {
+        "tags": [
+          "Game Suit"
+        ],
+        "summary": "The game is on",
+        "description": "This can only be done by someone has been regis",
+        "operationId": "Match-Result",
+        "requestBody": {
+          "description": "Created result game",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Match"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Match"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Match"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Match"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Match"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth":[]
+          }
+        ]
+      }
+    },
+    "/all": {
+      "get": {
+        "tags": [
+          "Etc"
+        ],
+        "summary": "show all user has been register",
+        "description": "",
+        "operationId": "findAll",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-Rate-Limit": {
+                "description": "calls per hour allowed by the user",
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "X-Expires-After": {
+                "description": "date in UTC when token expires",
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid username/password supplied"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Login": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "password": {
+            "type": "string",
+            "example": "binar25"
+          },
+          "role": {
+            "type": "string",
+            "example": "admin"
+          }
+        }
+      },
+      "Createroom": {
+        "type": "object",
+        "properties": {
+          "nameRoom": {
+            "type": "string",
+            "example": "room"
+          }
+        }
+      },
+      "Match": {
+        "type": "object",
+        "properties": {
+          "player1": {
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY3NjQxMjcxfQ.dxmMr7CCMNcUnO60CvsIK_ptGDGTnOUgjk0-OcWqzmU"
+          },
+          "player2": {
+            "type": "string",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjY3NjQxMjcxfQ.dxmMr7CCMNcUnO60CvsIK_ptGDGTnOUgjk0-OcWqzmU"
+          },
+          "roomId": {
+            "type": "string",
+            "example": "room_1"
+          },
+          "player1_pick": {
+            "type": "string",
+            "example": "kertas,kertas,kertas"
+          },
+          "player2_pick": {
+            "type": "string",
+            "example": "batu,gunting,kertas"
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "UserArray": {
+        "description": "List of user object",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}

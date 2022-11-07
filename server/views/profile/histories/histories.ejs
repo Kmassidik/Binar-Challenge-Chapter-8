@@ -1,0 +1,23 @@
+<div class="card mb-4 mb-xl-0">
+    <div class="card-header">Profile History</div>
+    <table id="example" class="display table text-center table-striped">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">User</th>
+          <th scope="col">Other User</th>
+          <th scope="col">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i = 0; i < users.length; i++){ %>
+          <tr>
+            <td scope="row" class="text-center"><%= i+1 %></td>
+            <td><%= users[i].user %></td>
+            <td><%= users[i].otherUser %></td>
+            <td><%= users[i].result %></td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+</div>
